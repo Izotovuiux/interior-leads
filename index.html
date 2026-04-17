@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
@@ -10,23 +9,22 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
---bg:        #080B0F;
---bg2:       #0D1117;
---bg3:       #111820;
---neon:      #00FF87;
---neon-dim:  rgba(0,255,135,0.12);
+--bg: #0a0a0a;
+--bg2: #111111;
+--bg3: #181818;
+--neon: #00FF87;
+--neon-dim: rgba(0,255,135,0.12);
 --neon-glow: rgba(0,255,135,0.35);
---blue:      #0D2137;
---text:      #E8EDF2;
---muted:     #5A6A7A;
---border:    rgba(0,255,135,0.1);
---border2:   rgba(255,255,255,0.06);
+--text: #F0F0F0;
+--muted: #6B7280;
+--border: rgba(0,255,135,0.15);
+--border2: rgba(255,255,255,0.08);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-font-family: ‘Space Grotesk’, sans-serif;
+font-family: 'Space Grotesk', sans-serif;
 background: var(--bg);
 color: var(--text);
 overflow-x: hidden;
@@ -85,7 +83,7 @@ transition: all 0.3s;
 }
 
 .logo {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 20px;
 font-weight: 800;
 letter-spacing: 0.06em;
@@ -200,21 +198,17 @@ font-size: 11px;
 font-weight: 600;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(--neon);
+color: #00FF87;
 margin-bottom: 32px;
 opacity: 0;
 animation: fadeUp 0.8s 0.2s ease forwards;
-}
-.hero-tag::before {
-content: ‘’;
-width: 32px; height: 1px;
-background: var(--neon);
-box-shadow: 0 0 8px var(--neon);
+border-left: 3px solid #00FF87;
+padding-left: 10px;
 }
 
 /* Blur-in H1 */
 .hero h1 {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: clamp(48px, 6vw, 92px);
 font-weight: 800;
 line-height: 0.95;
@@ -235,7 +229,7 @@ animation: blurReveal 0.9s ease forwards;
 
 @keyframes blurReveal {
 from { opacity: 0; filter: blur(12px); transform: translateY(16px); }
-to   { opacity: 1; filter: blur(0);    transform: translateY(0); }
+to { opacity: 1; filter: blur(0); transform: translateY(0); }
 }
 
 .hero-sub {
@@ -262,7 +256,7 @@ animation: fadeUp 0.8s 1.1s ease forwards;
 background: var(--neon);
 color: var(--bg);
 padding: 16px 44px;
-font-family: ‘Space Grotesk’, sans-serif;
+font-family: 'Space Grotesk', sans-serif;
 font-size: 14px;
 font-weight: 700;
 letter-spacing: 0.06em;
@@ -314,7 +308,7 @@ margin-right: 40px;
 }
 .h-stat:last-child { border-right: none; margin-right: 0; }
 .h-stat-num {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 44px;
 font-weight: 800;
 color: var(--neon);
@@ -332,7 +326,7 @@ text-transform: uppercase;
 
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(24px); }
-to   { opacity: 1; transform: translateY(0); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 /* ─── SECTION BASE ─── */
@@ -351,23 +345,21 @@ font-size: 11px;
 font-weight: 600;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(--neon);
+color: #00FF87;
 margin-bottom: 20px;
-}
-.section-tag::before {
-content: ‘’;
-width: 24px; height: 1px;
-background: var(--neon);
+border-left: 3px solid #00FF87;
+padding-left: 10px;
 }
 
 .section-title {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: clamp(36px, 4vw, 56px);
 font-weight: 800;
 line-height: 1.05;
 letter-spacing: -0.02em;
 margin-bottom: 16px;
 }
+
 
 .section-title em {
 font-style: normal;
@@ -409,7 +401,7 @@ position: relative;
 }
 
 .photo-frame::before {
-content: ‘’;
+content: '';
 position: absolute;
 inset: 0;
 background: linear-gradient(135deg, rgba(0,255,135,0.04) 0%, transparent 60%);
@@ -461,7 +453,7 @@ padding: 16px 20px;
 min-width: 160px;
 }
 .badge-num {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 32px;
 font-weight: 800;
 color: var(--neon);
@@ -496,7 +488,7 @@ transition: border-color 0.25s;
 .fact-item:hover { border-color: var(--border); }
 
 .fact-num {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 28px;
 font-weight: 800;
 color: var(--neon);
@@ -521,12 +513,12 @@ padding: 44px 36px;
 border: 1px solid var(--border2);
 position: relative;
 overflow: hidden;
-transition: background 0.35s, border-color 0.35s;
+transition: all 0.35s;
 cursor: default;
 }
 
 .service-card::before {
-content: ‘’;
+content: '';
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 2px;
@@ -560,7 +552,7 @@ border-radius: 2px;
 }
 
 .service-num {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 72px;
 font-weight: 800;
 color: rgba(0,255,135,0.05);
@@ -571,14 +563,13 @@ transition: color 0.3s;
 .service-card:hover .service-num { color: rgba(0,255,135,0.08); }
 
 .service-name {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 22px;
 font-weight: 700;
 color: var(--text);
 margin-bottom: 8px;
 letter-spacing: -0.01em;
 }
-
 .service-price {
 font-size: 14px;
 font-weight: 600;
@@ -609,20 +600,12 @@ gap: 10px;
 line-height: 1.5;
 }
 .service-list li::before {
-content: ‘→’;
+content: '\2192';
 color: var(--neon);
 font-weight: 700;
 flex-shrink: 0;
 margin-top: 1px;
 }
-
-/* ─── SERVICE CARD HOVER FIX ─── */
-/* Once visible, ensure hover line works regardless of reveal state */
-.service-card.visible::before,
-.service-card::before {
-transition: transform 0.4s ease !important;
-}
-.service-card.visible:hover::before { transform: scaleX(1) !important; }
 
 /* ─── CASES ─── */
 .cases { background: var(--bg2); border-top: 1px solid var(--border2); }
@@ -654,7 +637,7 @@ margin-bottom: 8px;
 }
 
 .case-title {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 20px;
 font-weight: 700;
 color: var(--text);
@@ -674,7 +657,7 @@ background: var(--bg2);
 padding: 16px;
 }
 .case-metric-val {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 26px;
 font-weight: 800;
 color: var(--neon);
@@ -730,7 +713,7 @@ margin-top: 64px;
 display: flex;
 flex-direction: column;
 gap: 2px;
-max-width: 100%;
+max-width: 800px;
 }
 
 .faq-item {
@@ -807,7 +790,7 @@ overflow: hidden;
 }
 
 .cta-section::before {
-content: ‘’;
+content: '';
 position: absolute;
 top: -200px; left: 50%;
 transform: translateX(-50%);
@@ -827,14 +810,11 @@ z-index: 1;
 
 .cta-inner .section-tag {
 justify-content: center;
+border-left: none;
+border-bottom: 2px solid #00FF87;
+padding-left: 0;
+padding-bottom: 4px;
 }
-.cta-inner .section-tag::before { display: none; }
-.cta-inner .section-tag::after {
-content: ‘’;
-width: 24px; height: 1px;
-background: var(--neon);
-}
-
 .cta-inner .section-title { margin-bottom: 16px; }
 
 .cta-inner .section-sub {
@@ -855,7 +835,7 @@ background: var(--bg3);
 border: 1px solid var(--border2);
 border-radius: 3px;
 padding: 16px 20px;
-font-family: ‘Space Grotesk’, sans-serif;
+font-family: 'Space Grotesk', sans-serif;
 font-size: 15px;
 color: var(--text);
 outline: none;
@@ -880,7 +860,7 @@ width: 100%;
 background: var(--neon);
 color: var(--bg);
 padding: 18px;
-font-family: ‘Space Grotesk’, sans-serif;
+font-family: 'Space Grotesk', sans-serif;
 font-size: 15px;
 font-weight: 700;
 letter-spacing: 0.06em;
@@ -912,7 +892,7 @@ font-size: 13px;
 color: var(--muted);
 }
 .g-item::before {
-content: ‘✓’;
+content: '\2713';
 color: var(--neon);
 font-weight: 700;
 font-size: 14px;
@@ -928,7 +908,7 @@ justify-content: space-between;
 align-items: center;
 }
 .footer-logo {
-font-family: ‘Syne’, sans-serif;
+font-family: 'Syne', sans-serif;
 font-size: 18px;
 font-weight: 800;
 color: var(--text);
@@ -984,415 +964,393 @@ footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24
 .case-metrics { grid-template-columns: 1fr 1fr; }
 }
 </style>
-
 </head>
 <body>
 
 <!-- NAV -->
-
 <nav id="nav">
-  <div class="logo">INTERIOR<span>LEADS</span></div>
-  <ul id="nav-menu">
-    <li><a href="#about">Про мене</a></li>
-    <li><a href="#services">Послуги</a></li>
-    <li><a href="#cases">Кейси</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact" class="nav-btn">Отримати аудит</a></li>
-  </ul>
-  <div class="burger" id="burger">
-    <span></span><span></span><span></span>
-  </div>
+<div class="logo">INTERIOR<span>LEADS</span></div>
+<ul id="nav-menu">
+<li><a href="#about">Про мене</a></li>
+<li><a href="#services">Послуги</a></li>
+<li><a href="#cases">Кейси</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact" class="nav-btn">Отримати аудит</a></li>
+</ul>
+<div class="burger" id="burger">
+<span></span><span></span><span></span>
+</div>
 </nav>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
-  <div class="hero-grid"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="hero-inner">
-    <div class="hero-tag">Google Ads · Ремонт квартир · Україна</div>
-    <h1>
-      <span class="line line-1">Більше заявок</span>
-      <span class="line line-2">на ремонт</span>
-      <span class="line line-3">з Google</span>
-    </h1>
-    <p class="hero-sub">
-      Налаштовую рекламу виключно для компаній з ремонту квартир.
-      <strong>Знаю нішу, знаю запити, знаю що конвертує.</strong>
-      Перші заявки — вже на першому тижні.
-    </p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-neon">Безкоштовний аудит</a>
-      <a href="#cases" class="btn-ghost">Дивитись кейси →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="h-stat">
-        <div class="h-stat-num">35+</div>
-        <div class="h-stat-label">Клієнтів в ніші</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">~400₴</div>
-        <div class="h-stat-label">Середня заявка</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">4×</div>
-        <div class="h-stat-label">Середній ROAS</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">2 тиж</div>
-        <div class="h-stat-label">До перших результатів</div>
-      </div>
-    </div>
-  </div>
+<div class="hero-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="hero-inner">
+<div class="hero-tag">Google Ads · Ремонт квартир · Україна</div>
+<h1>
+<span class="line line-1">Більше заявок</span>
+<span class="line line-2">на ремонт</span>
+<span class="line line-3">з Google</span>
+</h1>
+<p class="hero-sub">
+Налаштовую рекламу виключно для компаній з ремонту квартир.
+<strong>Знаю нішу, знаю запити, знаю що конвертує.</strong>
+Перші заявки — вже на першому тижні.
+</p>
+<div class="hero-cta">
+<a href="#contact" class="btn-neon">Безкоштовний аудит</a>
+<a href="#cases" class="btn-ghost">Дивитись кейси →</a>
+</div>
+<div class="hero-stats">
+<div class="h-stat">
+<div class="h-stat-num">35+</div>
+<div class="h-stat-label">Клієнтів в ніші</div>
+</div>
+<div class="h-stat">
+<div class="h-stat-num">~400₴</div>
+<div class="h-stat-label">Середня заявка</div>
+</div>
+<div class="h-stat">
+<div class="h-stat-num">4×</div>
+<div class="h-stat-label">Середній ROAS</div>
+</div>
+<div class="h-stat">
+<div class="h-stat-num">2 тиж</div>
+<div class="h-stat-label">До перших результатів</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
-
 <section class="about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-photo reveal-left">
-        <div class="photo-frame">
-          <div class="corner corner-tl"></div>
-          <div class="corner corner-tr"></div>
-          <div class="corner corner-bl"></div>
-          <div class="corner corner-br"></div>
-          <div class="photo-placeholder">
-            <div class="photo-icon">👤</div>
-            <div class="photo-hint">Додай своє фото<br>тут буде більше довіри</div>
-          </div>
-        </div>
-        <div class="about-badge">
-          <div class="badge-num">3+</div>
-          <div class="badge-label">роки в Google Ads</div>
-        </div>
-      </div>
-
-  <div class="about-text">
-    <div class="section-tag reveal d1">Про мене</div>
-    <h2 class="section-title reveal d2">Я не агентство.<br>Я <em>спеціаліст</em>.</h2>
-    <p class="about-desc reveal d3">
-      Мене звати [Твоє ім'я]. Я займаюсь виключно Google Ads для ремонтних компаній.
-      <strong>Не беру клієнтів з інших ніш</strong> — тому що глибока спеціалізація
-      дає кращий результат ніж широта. Знаю які ключові слова приводять людей готових
-      платити, а які просто зливають бюджет.
-    </p>
-    <div class="about-facts reveal d4">
-      <div class="fact-item">
-        <div class="fact-num">35+</div>
-        <div class="fact-label">Компаній запущено</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-num">7</div>
-        <div class="fact-label">Міст України</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-num">100%</div>
-        <div class="fact-label">Ніша ремонту</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-num">↑87%</div>
-        <div class="fact-label">Середній ріст заявок</div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="about-grid">
+<div class="about-photo reveal-left">
+<div class="photo-frame">
+<div class="corner corner-tl"></div>
+<div class="corner corner-tr"></div>
+<div class="corner corner-bl"></div>
+<div class="corner corner-br"></div>
+<div class="photo-placeholder">
+<div class="photo-icon">👤</div>
+<div class="photo-hint">Додай своє фото<br>тут буде більше довіри</div>
+</div>
+</div>
+<div class="about-badge">
+<div class="badge-num">3+</div>
+<div class="badge-label">роки в Google Ads</div>
+</div>
 </div>
 
-  </div>
+<div class="about-text">
+<div class="section-tag reveal d1">Про мене</div>
+<h2 class="section-title reveal d2">Я не агентство.<br>Я <em>спеціаліст</em>.</h2>
+<p class="about-desc reveal d3">
+Мене звати [Твоє ім'я]. Я займаюсь виключно Google Ads для ремонтних компаній.
+<strong>Не беру клієнтів з інших ніш</strong> — тому що глибока спеціалізація
+дає кращий результат ніж широта. Знаю які ключові слова приводять людей готових
+платити, а які просто зливають бюджет.
+</p>
+<div class="about-facts reveal d4">
+<div class="fact-item">
+<div class="fact-num">35+</div>
+<div class="fact-label">Компаній запущено</div>
+</div>
+<div class="fact-item">
+<div class="fact-num">7</div>
+<div class="fact-label">Міст України</div>
+</div>
+<div class="fact-item">
+<div class="fact-num">100%</div>
+<div class="fact-label">Ніша ремонту</div>
+</div>
+<div class="fact-item">
+<div class="fact-num">↑87%</div>
+<div class="fact-label">Середній ріст заявок</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- SERVICES -->
-
 <section class="services" id="services">
-  <div class="section-inner">
-    <div class="reveal">
-      <div class="section-tag">Послуги та ціни</div>
-      <h2 class="section-title">Що ти <em>отримуєш</em></h2>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal d2">
-        <div class="service-num">01</div>
-        <div class="service-name">Аудит та стратегія</div>
-        <div class="service-price">Безкоштовно</div>
-        <p class="service-desc">Аналізую ринок у твоєму місті, дивлюся конкурентів і показую де ти втрачаєш заявки зараз.</p>
-        <ul class="service-list">
-          <li>Аналіз конкурентів у місті</li>
-          <li>Оцінка потенціалу ніші</li>
-          <li>Розрахунок бюджету і CPA</li>
-          <li>Рекомендації без зобов'язань</li>
-        </ul>
-      </div>
-
-  <div class="service-card popular reveal d3">
-    <div class="popular-badge">Популярне</div>
-    <div class="service-num">02</div>
-    <div class="service-name">Запуск під ключ</div>
-    <div class="service-price">від $500 / міс</div>
-    <p class="service-desc">Повне налаштування і ведення Google Search. Заявки з першого тижня, звіти щотижня.</p>
-    <ul class="service-list">
-      <li>Налаштування Search + Remarketing</li>
-      <li>Написання 10+ оголошень</li>
-      <li>A/B тести та оптимізація</li>
-      <li>Щотижневий звіт з цифрами</li>
-      <li>Гарантія 15+ заявок або повернення</li>
-    </ul>
-  </div>
-
-  <div class="service-card reveal d4">
-    <div class="service-num">03</div>
-    <div class="service-name">Агресивний ріст</div>
-    <div class="service-price">від $900 / міс</div>
-    <p class="service-desc">Повна екосистема Google Ads для домінування в місті. Search + Display + Performance Max.</p>
-    <ul class="service-list">
-      <li>Search + Display + Pmax</li>
-      <li>Щоденний моніторинг бюджету</li>
-      <li>Аналіз якості дзвінків і лідів</li>
-      <li>Щомісячна стратегія масштабування</li>
-      <li>Пріоритетний зв'язок 2 год</li>
-    </ul>
-  </div>
+<div class="section-inner">
+<div class="reveal">
+<div class="section-tag">Послуги та ціни</div>
+<h2 class="section-title">Що ти <em>отримуєш</em></h2>
+</div>
+<div class="services-grid">
+<div class="service-card reveal d2">
+<div class="service-num">01</div>
+<div class="service-name">Аудит та стратегія</div>
+<div class="service-price">Безкоштовно</div>
+<p class="service-desc">Аналізую ринок у твоєму місті, дивлюся конкурентів і показую де ти втрачаєш заявки зараз.</p>
+<ul class="service-list">
+<li>Аналіз конкурентів у місті</li>
+<li>Оцінка потенціалу ніші</li>
+<li>Розрахунок бюджету і CPA</li>
+<li>Рекомендації без зобов'язань</li>
+</ul>
 </div>
 
-  </div>
+<div class="service-card popular reveal d3">
+<div class="popular-badge">Популярне</div>
+<div class="service-num">02</div>
+<div class="service-name">Запуск під ключ</div>
+<div class="service-price">від $500 / міс</div>
+<p class="service-desc">Повне налаштування і ведення Google Search. Заявки з першого тижня, звіти щотижня.</p>
+<ul class="service-list">
+<li>Налаштування Search + Remarketing</li>
+<li>Написання 10+ оголошень</li>
+<li>A/B тести та оптимізація</li>
+<li>Щотижневий звіт з цифрами</li>
+<li>Гарантія 15+ заявок або повернення</li>
+</ul>
+</div>
+
+<div class="service-card reveal d4">
+<div class="service-num">03</div>
+<div class="service-name">Агресивний ріст</div>
+<div class="service-price">від $900 / міс</div>
+<p class="service-desc">Повна екосистема Google Ads для домінування в місті. Search + Display + Performance Max.</p>
+<ul class="service-list">
+<li>Search + Display + Pmax</li>
+<li>Щоденний моніторинг бюджету</li>
+<li>Аналіз якості дзвінків і лідів</li>
+<li>Щомісячна стратегія масштабування</li>
+<li>Пріоритетний зв'язок 2 год</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <!-- CASES -->
-
 <section class="cases" id="cases">
-  <div class="section-inner">
-    <div class="reveal">
-      <div class="section-tag">Кейси</div>
-      <h2 class="section-title">Реальні <em>результати</em></h2>
-      <p class="section-sub">Цифри з рекламних кабінетів. Підправ під свої реальні дані.</p>
-    </div>
-    <div class="cases-grid">
+<div class="section-inner">
+<div class="reveal">
+<div class="section-tag">Кейси</div>
+<h2 class="section-title">Реальні <em>результати</em></h2>
+<p class="section-sub">Цифри з рекламних кабінетів. Підправ під свої реальні дані.</p>
+</div>
+<div class="cases-grid">
 
-  <div class="case-card reveal-left d2">
-    <div class="case-city">Київ · Ремонт під ключ</div>
-    <div class="case-title">Преміум ремонт від $450/м² — вихід на 40+ заявок на місяць</div>
-    <div class="case-metrics">
-      <div class="case-metric">
-        <div class="case-metric-val">43</div>
-        <div class="case-metric-label">Заявки/міс</div>
-      </div>
-      <div class="case-metric">
-        <div class="case-metric-val">520₴</div>
-        <div class="case-metric-label">Ціна заявки</div>
-      </div>
-      <div class="case-metric">
-        <div class="case-metric-val">3.8×</div>
-        <div class="case-metric-label">ROAS</div>
-      </div>
-    </div>
-    <p class="case-desc">Клієнт прийшов з нульовим рекламним акаунтом. За 2 місяці вийшли на стабільний потік заявок з середнім чеком проекту $18 000.</p>
-    <div class="case-progress">
-      <div class="progress-label"><span>Конверсія сайту</span><span>2.9%</span></div>
-      <div class="progress-track"><div class="progress-fill" style="--w: 58%"></div></div>
-    </div>
-  </div>
-
-  <div class="case-card reveal-right d2">
-    <div class="case-city">Львів · Ремонт квартир</div>
-    <div class="case-title">Ремонтна бригада — з 8 до 35 заявок за перший місяць</div>
-    <div class="case-metrics">
-      <div class="case-metric">
-        <div class="case-metric-val">35</div>
-        <div class="case-metric-label">Заявки/міс</div>
-      </div>
-      <div class="case-metric">
-        <div class="case-metric-val">310₴</div>
-        <div class="case-metric-label">Ціна заявки</div>
-      </div>
-      <div class="case-metric">
-        <div class="case-metric-val">5.1×</div>
-        <div class="case-metric-label">ROAS</div>
-      </div>
-    </div>
-    <p class="case-desc">Оптимізував існуючі кампанії, прибрав нецільові ключі, переписав оголошення. Бюджет не збільшували — результат виріс у 4 рази.</p>
-    <div class="case-progress">
-      <div class="progress-label"><span>Конверсія сайту</span><span>3.4%</span></div>
-      <div class="progress-track"><div class="progress-fill" style="--w: 68%"></div></div>
-    </div>
-  </div>
-
+<div class="case-card reveal-left d2">
+<div class="case-city">Київ · Ремонт під ключ</div>
+<div class="case-title">Преміум ремонт від $450/м² — вихід на 40+ заявок на місяць</div>
+<div class="case-metrics">
+<div class="case-metric">
+<div class="case-metric-val">43</div>
+<div class="case-metric-label">Заявки/міс</div>
+</div>
+<div class="case-metric">
+<div class="case-metric-val">520₴</div>
+<div class="case-metric-label">Ціна заявки</div>
+</div>
+<div class="case-metric">
+<div class="case-metric-val">3.8×</div>
+<div class="case-metric-label">ROAS</div>
+</div>
+</div>
+<p class="case-desc">Клієнт прийшов з нульовим рекламним акаунтом. За 2 місяці вийшли на стабільний потік заявок з середнім чеком проекту $18 000.</p>
+<div class="case-progress">
+<div class="progress-label"><span>Конверсія сайту</span><span>2.9%</span></div>
+<div class="progress-track"><div class="progress-fill" style="--w: 58%"></div></div>
+</div>
 </div>
 
-  </div>
+<div class="case-card reveal-right d2">
+<div class="case-city">Львів · Ремонт квартир</div>
+<div class="case-title">Ремонтна бригада — з 8 до 35 заявок за перший місяць</div>
+<div class="case-metrics">
+<div class="case-metric">
+<div class="case-metric-val">35</div>
+<div class="case-metric-label">Заявки/міс</div>
+</div>
+<div class="case-metric">
+<div class="case-metric-val">310₴</div>
+<div class="case-metric-label">Ціна заявки</div>
+</div>
+<div class="case-metric">
+<div class="case-metric-val">5.1×</div>
+<div class="case-metric-label">ROAS</div>
+</div>
+</div>
+<p class="case-desc">Оптимізував існуючі кампанії, прибрав нецільові ключі, переписав оголошення. Бюджет не збільшували — результат виріс у 4 рази.</p>
+<div class="case-progress">
+<div class="progress-label"><span>Конверсія сайту</span><span>3.4%</span></div>
+<div class="progress-track"><div class="progress-fill" style="--w: 68%"></div></div>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
-
 <section class="faq" id="faq">
-  <div class="section-inner">
-    <div class="reveal">
-      <div class="section-tag">FAQ</div>
-      <h2 class="section-title">Часті <em>питання</em></h2>
-    </div>
-    <div class="faq-list reveal d2">
+<div class="section-inner">
+<div class="reveal">
+<div class="section-tag">FAQ</div>
+<h2 class="section-title">Часті <em>питання</em></h2>
+</div>
+<div class="faq-list reveal d2">
 
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Скільки часу потрібно щоб побачити перші заявки?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p>Перші кліки йдуть вже в перший день після запуску. <strong>Перші заявки — як правило на 3-7 день.</strong> Повноцінна оптимізація і стабільний потік формується за 3-4 тижні, коли накопичується достатньо даних для роботи алгоритмів.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Який мінімальний бюджет на рекламу потрібен?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p>Залежить від міста. <strong>Київ — від $500/міс на рекламу</strong>, регіональні міста — від $200-300/міс. Менший бюджет дає менше даних і сповільнює навчання алгоритмів. Моя оплата за ведення — окремо від рекламного бюджету.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Чи можеш вести клієнта в моєму місті якщо там вже є інший твій клієнт?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p><strong>Ні — один клієнт на місто.</strong> Це принципова позиція. Я не можу якісно просувати двох конкурентів одночасно і не хочу ставити клієнтів в таку ситуацію. Тому якщо твоє місто вільне — забираємо його для тебе.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Рекламний акаунт буде моїм чи твоїм?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p><strong>Акаунт створюється на тебе і залишається твоїм.</strong> Ти надаєш мені доступ через свій Google акаунт. Вся історія кампаній, дані, статистика — твоя власність. Навіть якщо ми припинимо співпрацю — всі напрацювання залишаються у тебе.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Що якщо я не задоволений результатом?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p>На пакеті "Запуск під ключ" є гарантія: <strong>якщо за перший місяць менше 15 заявок — повертаю оплату за ведення повністю.</strong> Я ризикую разом з тобою, тому зацікавлений в результаті не менше ніж ти.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      <span class="faq-q-text">Чи потрібен готовий сайт щоб запустити рекламу?</span>
-      <span class="faq-icon">+</span>
-    </div>
-    <div class="faq-a"><p>Так, якісний сайт або лендинг — обов'язковий. <strong>Реклама приводить трафік, але конвертує сайт.</strong> Якщо сайту немає або він слабкий — можу порадити що виправити перед запуском, щоб не зливати бюджет.</p></div>
-  </div>
-
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Скільки часу потрібно щоб побачити перші заявки?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p>Перші кліки йдуть вже в перший день після запуску. <strong>Перші заявки — як правило на 3-7 день.</strong> Повноцінна оптимізація і стабільний потік формується за 3-4 тижні, коли накопичується достатньо даних для роботи алгоритмів.</p></div>
 </div>
 
-  </div>
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Який мінімальний бюджет на рекламу потрібен?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p>Залежить від міста. <strong>Київ — від $500/міс на рекламу</strong>, регіональні міста — від $200-300/міс. Менший бюджет дає менше даних і сповільнює навчання алгоритмів. Моя оплата за ведення — окремо від рекламного бюджету.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Чи можеш вести клієнта в моєму місті якщо там вже є інший твій клієнт?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p><strong>Ні — один клієнт на місто.</strong> Це принципова позиція. Я не можу якісно просувати двох конкурентів одночасно і не хочу ставити клієнтів в таку ситуацію. Тому якщо твоє місто вільне — забираємо його для тебе.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Рекламний акаунт буде моїм чи твоїм?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p><strong>Акаунт створюється на тебе і залишається твоїм.</strong> Ти надаєш мені доступ через свій Google акаунт. Вся історія кампаній, дані, статистика — твоя власність. Навіть якщо ми припинимо співпрацю — всі напрацювання залишаються у тебе.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Що якщо я не задоволений результатом?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p>На пакеті "Запуск під ключ" є гарантія: <strong>якщо за перший місяць менше 15 заявок — повертаю оплату за ведення повністю.</strong> Я ризикую разом з тобою, тому зацікавлений в результаті не менше ніж ти.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Чи потрібен готовий сайт щоб запустити рекламу?</span>
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-a"><p>Так, якісний сайт або лендинг — обов'язковий. <strong>Реклама приводить трафік, але конвертує сайт.</strong> Якщо сайту немає або він слабкий — можу порадити що виправити перед запуском, щоб не зливати бюджет.</p></div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- CTA FORM -->
-
 <section class="cta-section" id="contact">
-  <div class="cta-inner">
-    <div class="section-tag reveal">Безкоштовний аудит</div>
-    <h2 class="section-title reveal d1">Дізнайся скільки<br>заявок <em>ти втрачаєш</em></h2>
-    <p class="section-sub reveal d2">Заповни форму — протягом 24 годин отримаєш аналіз ніші у твоєму місті та орієнтовну вартість заявки.</p>
+<div class="cta-inner">
+<div class="section-tag reveal">Безкоштовний аудит</div>
+<h2 class="section-title reveal d1">Дізнайся скільки<br>заявок <em>ти втрачаєш</em></h2>
+<p class="section-sub reveal d2">Заповни форму — протягом 24 годин отримаєш аналіз ніші у твоєму місті та орієнтовну вартість заявки.</p>
 
 <div class="reveal d3">
-  <div class="form-group">
-    <input type="text" class="form-input" placeholder="Твоє ім'я">
-    <input type="tel" class="form-input" placeholder="Номер телефону або Telegram">
-    <input type="text" class="form-input" placeholder="Місто та сфера (ремонт квартир, дизайн...)">
-  </div>
-  <button class="btn-neon-full">Отримати безкоштовний аудит →</button>
-  <p class="form-note">Без спаму. Без зобов'язань. Відповідь протягом 24 годин.</p>
+<div class="form-group">
+<input type="text" class="form-input" placeholder="Твоє ім'я">
+<input type="tel" class="form-input" placeholder="Номер телефону або Telegram">
+<input type="text" class="form-input" placeholder="Місто та сфера (ремонт квартир, дизайн...)">
+</div>
+<button class="btn-neon-full">Отримати безкоштовний аудит →</button>
+<p class="form-note">Без спаму. Без зобов'язань. Відповідь протягом 24 годин.</p>
 </div>
 
 <div class="guarantee-row reveal d4">
-  <div class="g-item">Без передоплати</div>
-  <div class="g-item">Один клієнт на місто</div>
-  <div class="g-item">Гарантія результату</div>
+<div class="g-item">Без передоплати</div>
+<div class="g-item">Один клієнт на місто</div>
+<div class="g-item">Гарантія результату</div>
 </div>
-
-  </div>
+</div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-  <div class="footer-logo">INTERIOR<span>LEADS</span></div>
-  <div class="footer-copy">© 2025 INTERIOR LEADS · Google Ads для ремонту квартир</div>
+<div class="footer-logo">INTERIOR<span>LEADS</span></div>
+<div class="footer-copy">© 2025 INTERIOR LEADS · Google Ads для ремонту квартир</div>
 </footer>
 
 <script>
 // ─── SCROLL REVEAL ───
 const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      // animate progress bars
-      e.target.querySelectorAll('.progress-fill').forEach(bar => bar.classList.add('animated'));
-      // After reveal animation finishes — reset transition-delay so hover works correctly
-      const delay = parseFloat(getComputedStyle(e.target).transitionDelay) * 1000 || 0;
-      const duration = parseFloat(getComputedStyle(e.target).transitionDuration) * 1000 || 750;
-      setTimeout(() => {
-        e.target.style.transitionDelay = '0s';
-        e.target.style.transition = 'background 0.35s, border-color 0.35s';
-      }, delay + duration);
-    }
-  });
+entries.forEach(e => {
+if (e.isIntersecting) {
+e.target.classList.add('visible');
+// animate progress bars
+e.target.querySelectorAll('.progress-fill').forEach(bar => bar.classList.add('animated'));
+}
+});
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => observer.observe(el));
 
 // Also animate progress bars inside revealed cards
 document.querySelectorAll('.case-card').forEach(card => {
-  const cardObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.progress-fill').forEach(b => b.classList.add('animated'));
-      }
-    });
-  }, { threshold: 0.3 });
-  cardObs.observe(card);
+const cardObs = new IntersectionObserver((entries) => {
+entries.forEach(e => {
+if (e.isIntersecting) {
+e.target.querySelectorAll('.progress-fill').forEach(b => b.classList.add('animated'));
+}
+});
+}, { threshold: 0.3 });
+cardObs.observe(card);
 });
 
 // ─── FAQ TOGGLE ───
 document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  });
+q.addEventListener('click', () => {
+const item = q.parentElement;
+const isOpen = item.classList.contains('open');
+document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+if (!isOpen) item.classList.add('open');
+});
 });
 
 // ─── BURGER MENU ───
 const burger = document.getElementById('burger');
 const menu = document.getElementById('nav-menu');
 burger.addEventListener('click', () => {
-  menu.classList.toggle('open');
+menu.classList.toggle('open');
 });
 
 // Close menu on link click
 menu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => menu.classList.remove('open'));
+a.addEventListener('click', () => menu.classList.remove('open'));
 });
 
 // ─── NAV SCROLL EFFECT ───
 window.addEventListener('scroll', () => {
-  const nav = document.getElementById('nav');
-  if (window.scrollY > 40) {
-    nav.style.borderBottomColor = 'rgba(0,255,135,0.15)';
-  } else {
-    nav.style.borderBottomColor = 'rgba(0,255,135,0.1)';
-  }
+const nav = document.getElementById('nav');
+if (window.scrollY > 40) {
+nav.style.borderBottomColor = 'rgba(0,255,135,0.15)';
+} else {
+nav.style.borderBottomColor = 'rgba(0,255,135,0.1)';
+}
 });
 
 // ─── SMOOTH ANCHOR ───
 document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+a.addEventListener('click', e => {
+e.preventDefault();
+const target = document.querySelector(a.getAttribute('href'));
+if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 });
 </script>
-
 </body>
 </html>
