@@ -1258,11 +1258,14 @@ footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24
 <p class="section-sub reveal d2">Заповни форму — протягом 24 годин отримаєш аналіз ніші у твоєму місті та орієнтовну вартість заявки.</p>
 
 <div class="reveal d3">
-<div class="form-group">
-<input type="text" class="form-input" placeholder="Твоє ім'я">
-<input type="tel" class="form-input" placeholder="Номер телефону або Telegram">
-<input type="text" class="form-input" placeholder="Місто та сфера (ремонт квартир, дизайн...)">
-</div>
+  <form action="https://formspree.io/f/xyklpbkb" method="POST">
+  <div class="form-group">
+    <input type="text" name="name" class="form-input" placeholder="Твоє імʼя">
+    <input type="tel" name="phone" class="form-input" placeholder="Номер телефону або Telegram">
+    <input type="text" name="city" class="form-input" placeholder="Місто та сфера (ремонт квартир, дизайн...)">
+  </div>
+  <button type="submit" class="btn-neon-full">Отримати безкоштовний аудит →</button>
+</form>
 <button class="btn-neon-full">Отримати безкоштовний аудит →</button>
 <p class="form-note">Без спаму. Без зобов'язань. Відповідь протягом 24 годин.</p>
 </div>
