@@ -1262,7 +1262,7 @@ footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24
 <p class="section-sub reveal d2">Заповни форму — протягом 24 годин отримаєш аналіз ніші у твоєму місті та орієнтовну вартість заявки.</p>
 
 <div class="reveal d3">
-  <form action="https://formspree.io/f/xyklpbkb" method="POST">
+  <form id="contact-form">
   <div class="form-group">
     <input type="text" name="name" class="form-input" placeholder="Твоє імʼя" required>
     <input type="tel" name="phone" class="form-input" placeholder="Номер телефону або Telegram" required>
@@ -1270,6 +1270,9 @@ footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24
   </div>
   <button type="submit" class="btn-neon-full">Отримати безкоштовний аудит →</button>
 </form>
+  <div id="success-msg" style="display:none; margin-top:20px; padding:20px; background:rgba(0,255,135,0.08); border:1px solid rgba(0,255,135,0.3); border-radius:3px; text-align:center; color:#00FF87; font-size:15px;">
+  ✓ Заявку отримано! Звʼяжусь з вами протягом 24 годин.
+</div>
 <p class="form-note">Без спаму. Без зобов'язань. Відповідь протягом 24 годин.</p>
 </div>
 
@@ -1353,6 +1356,20 @@ e.preventDefault();
 const target = document.querySelector(a.getAttribute('href'));
 if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+});
+  const form = document.getElementById('contact-form');
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  const response = await fetch('https://formspree.io/f/xyklpbkb', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+  if (response.ok) {
+    form.style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
 });
 </script>
 </body>
